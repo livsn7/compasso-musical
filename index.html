@@ -3,30 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>compasso musical - loja de instrumentos musicais</title>
+    <title>Compasso Musical - loja de instrumentos musicais</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva,
+                Verdana, sans-serif;
+                background-color: #f8f9fa;
+                color: #333333;
+                line-height: 1.6;
+        }
+
+        h1,h2,h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+        .cabecalhoPrincipal {
+            background-color: #ffff;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nomeLogo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+        .listaNavegacao {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .linkNav {
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .linkNav:houver {
+            color: #d32f2f;
+        }
+
+            .botaoPrincipal:houver {
+                background-color: #d32f2f;
+                color: #ffffff;
+                padding: o.8rem 1.5rem;
+                border-radius: 4px;
+                font-weight: bold;
+                margin-top: 1rem;
+            }
+
+            .container {
+                padding: 4rem 5%;
+            }
+
+            .tituloSecao {
+                text-align: center;
+                font-size: 2,5rem;
+                margin-bottom: 2rem;
+            }
+
+            .gradeProdutos {
+                display: flex;
+                gap: 2rem;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .cartaoProduto {
+                background-color: #ffffff;
+                border-radius: 8px;
+                padding: 1.5rem;
+                width: 300px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                text-align: center;
+            }
+    </style>
 </head>
 <body>
     <!--cabeçalho do site-->
-    <header id="header">
+    <header id="header" class="cabecalhoPrincipal">
         <div id="logo">
-            <h1>compasso musical</h1>
+            <h1>Compasso Musical</h1>
         </div>
-        <nav id="nav">
+        <nav id="nav" class="listaNavegaçãõ">
             <ul>
                 <li>
-                    <a href="#">inicio</a>
+                    <a href="#hero"
+                    class="linkNav">inicio</a>
                 </li>
                 <li>
-                    <a href="#">sobre</a>
+                    <a href="#sobre"
+                    class="linkNav">sobre</a>
                 </li>
                 <li>
-                    <a href="#">produtos</a>
+                    <a href="#produtos"
+                    class="linkNav">produtos</a>
                 </li>
                 <li>
-                    <a href="#">depoimentos</a>
+                    <a href="#depoimentos"
+                    class="linkNav">depoimentos</a>
                 </li>
                 <li>
-                    <a href="#">contatos</a>
+                    <a href="#contatos"
+                    class="linkNav">contatos</a>
                 </li>
             </ul>
         </nav>
@@ -44,45 +143,48 @@
             <img 
             src="https://images.unsplash.com/photo-1604514288114-3851479df2f2" 
             alt="banda musical que esta tocando com os instrumentos da
-             compasso musical"
-             width="200"
+            compasso musical"
+            width="200"
             >
             <br><br>
             <a href="#">ver nossas ofertas</a>
         </section>
 
             <!--seção sobre-->
-            <section id="sobre">
-                <h2>sobre a compasso musical</h2>
-                <p>
-                    nossa loja nasceu da paixao pela musica, nossa missao é
-                    entregar qualidade sonora tanto para quem esta aprendendo os
-                    primeiros acordes quanto para musicos profissionais.
-                </p>
-                <ul>
-                    <li>todos os instrumentos sao revisados por nossa equipe tecnica.</li>
-                    <li>garantia estendida de fabrica.</li>
-                    <li>suporte e atendimento feito por musicos reais.</li>
-                </ul>
+            <section id="sobre" class="container">
+                <h2 class="tituloSecao">sobre a compasso musical</h2>
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <p>
+                        nossa loja nasceu da paixao pela musica, nossa missao é
+                        entregar qualidade sonora tanto para quem esta aprendendo os
+                        primeiros acordes quanto para musicos profissionais.
+                    </p>
+                    <ul style="text-align: left; display:
+                    inline-block;margin-top:1rem">
+                        <li style="margin-bottom: 0.5rem;">todos os instrumentos sao revisados por nossa equipe tecnica.</li>
+                        <li style="margin-bottom: 0.5rem;">garantia estendida de fabrica.</li>
+                        <li style="margin-bottom: 0.5rem;">suporte e atendimento feito por musicos reais.</li>
+                    </ul>
+                </div>
             </section>
             <!--produtos-->
-            <section id="produtos">
-                <h2>catalogo de instrumentos</h2>
-
-                <article>
-                    <h3>guitarra eletrica stratocaster</h3>
-                    <img 
-                    src="https://images.unsplash.com/photo-1632413190012-4a9591b7eb91" 
-                    alt="guitarra eletrica stratocaster"
-                    width="200"
-                    >
-                    <p>
-                        <strong>marca: </strong>Fender
-                    </p>
-                    <p> guitarra classica de alta perfomance, ideal para rock e blues.</p>
-                    <p><em>Preço: R$3.500,00</em></p>
-                    <a href="#">adicionar ao carrinho</a>
-                </article>
+            <section id="produtos" class="container" style="background-color: #eeeeee;">
+                <h2 class="tituloSecao">catalogo de instrumentos</h2>
+                <div class="gradeProdutos">
+                    <article class="cartaoProduto">
+                        <h3 class="nomeProduto">guitarra eletrica stratocaster</h3>
+                        <img 
+                        src="https://images.unsplash.com/photo-1632413190012-4a9591b7eb91" 
+                        alt="guitarra eletrica stratocaster"
+                        width="200"
+                        >
+                        <p>
+                            <strong>marca: </strong>Fender
+                        </p>
+                        <p> guitarra classica de alta perfomance, ideal para rock e blues.</p>
+                        <p><em>Preço: R$3.500,00</em></p>
+                        <a href="#">adicionar ao carrinho</a>
+                    </article>
                                 <article>
                     <h3>bateria acustica profissional</h3>
                     <img 
@@ -96,6 +198,7 @@
                     <p>kit com bumbo,caixas,surdo e pratos.som encorpado</p>
                     <p><em>Preço: R$5.200,00</em></p>
                     <a href="#">adicionar ao carrinho</a>
+                    </div>
             </section>
             <!--seção depoimentos-->
             <section id="depoimentos">
@@ -108,7 +211,7 @@
                     <footer>- <cite>Maria Cecília,Baterista</cite></footer>
                 </blockquote>
                 <br>
-                  <blockquote>
+                <blockquote>
                     <p>
                         "comprei minha primeira guitarrana compasso musical. o atendimento me ajudou
                         a escolher o modelo certo"
